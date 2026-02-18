@@ -1974,9 +1974,13 @@
 				"exec": [
 					"",
 					"",
-					"pm.test(\"successful response validation\", function(){",
-					"    pm.response.to.have.status(201)",
-					"});"
+				    "pm.test(\"successful response validation\", function () {",
+				    "    if (pm.request.method === \"POST\") {",
+				    "        pm.response.to.have.status(201);",
+				    "    } else {",
+				    "        pm.response.to.have.status(200);",
+				    "    }",
+				    "});"
 				]
 			}
 		}
