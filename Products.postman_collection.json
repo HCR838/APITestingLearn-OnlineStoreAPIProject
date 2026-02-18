@@ -1975,7 +1975,7 @@
 					"",
 					"",
 					"pm.test(\"successful response validation\", function(){",
-					"    pm.response.to.have.status(200)",
+					"    pm.response.to.have.status(201)",
 					"});"
 				]
 			}
